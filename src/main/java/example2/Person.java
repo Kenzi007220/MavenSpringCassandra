@@ -1,4 +1,4 @@
-package main.java.example2;
+package example2;
 
 import org.springframework.data.cassandra.mapping.PrimaryKey;
 import org.springframework.data.cassandra.mapping.Table;
@@ -20,7 +20,7 @@ public class Person {
     }
 
     public String getId() {
-        return this.id;
+        return this.id.toString();
     }
 
     public String getName() {

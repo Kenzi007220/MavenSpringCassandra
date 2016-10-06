@@ -1,20 +1,16 @@
-package main.java.example2;
+package example2;
 
-import main.java.example2.Person;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.util.List;
-
+import com.datastax.driver.core.Cluster;
+import com.datastax.driver.core.Session;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.cassandra.core.CassandraOperations;
 import org.springframework.data.cassandra.core.CassandraTemplate;
 
-import com.datastax.driver.core.Cluster;
-import com.datastax.driver.core.Session;
-import com.datastax.driver.core.querybuilder.QueryBuilder;
-import com.datastax.driver.core.querybuilder.Select;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.List;
+
 
 public class CassandraApp {
 
@@ -44,7 +40,7 @@ public class CassandraApp {
 
             List<Person> results = cassandraOps.select(cqlAll, Person.class);
             for (Person p : results) {
-               LOG.info(String.format("Found People with Name [%s] for id [%s]", p.getName(), p.getId()));
+                LOG.info(String.format("Found People with Name [%s] for id [%s]", p.getName(), p.getId()));
             }
             results.forEach(System.out::println);
             cassandraOps.truncate("person");

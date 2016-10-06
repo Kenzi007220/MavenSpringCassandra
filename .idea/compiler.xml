@@ -28,9 +28,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="br.algar.MavenSpringCassandra" target="1.5" />
+      <module name="br.algar.MavenSpringCassandra" target="1.8" />
       <module name="br.algar.mavenspringdata" target="1.8" />
-      <module name="MavenSpringCassandra" target="1.5" />
+      <module name="MavenSpringCassandra" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
